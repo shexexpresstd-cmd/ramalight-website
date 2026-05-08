@@ -17,9 +17,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <div className="text-xl font-extrabold text-white tracking-[-0.4px] mb-3">
-              RAMALIGHT<span className="text-accent-light">.</span>
-            </div>
+            <img src="/logo.jpg" alt="RAMALIGHT" className="h-10 w-auto mb-3 rounded" />
             <p className="text-sm text-white/30 leading-relaxed mb-4">
               RAMALIGHT CO. LIMITED — East Africa&apos;s premier manufacturer of
               industrial-grade sodium hypochlorite. Quality. Consistency. Trust.

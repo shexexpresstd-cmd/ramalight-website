@@ -30,13 +30,13 @@ export default function Navbar() {
       <div className="container-xl flex items-center justify-between px-6 lg:px-12">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <motion.div
-            className="w-9 h-9 rounded-md bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white font-black text-sm"
-            whileHover={{ scale: 1.05, rotate: -5 }}
-          >
-            RL
-          </motion.div>
-          <span className="text-lg font-extrabold text-white tracking-[-0.4px]">
+          <motion.img
+            src="/logo.jpg"
+            alt="RAMALIGHT"
+            className="h-9 w-auto rounded"
+            whileHover={{ scale: 1.05 }}
+          />
+          <span className="text-lg font-extrabold text-white tracking-[-0.4px] hidden sm:inline">
             RAMALIGHT<span className="text-accent-light">.</span>
           </span>
         </a>
