@@ -33,12 +33,9 @@ export default function Navbar() {
           <motion.img
             src="/logo.jpg"
             alt="RAMALIGHT"
-            className="h-9 w-auto rounded"
+            className="h-10 w-auto"
             whileHover={{ scale: 1.05 }}
           />
-          <span className="text-lg font-extrabold text-brand tracking-[-0.4px] hidden sm:inline">
-            RAMALIGHT<span className="text-accent">.</span>
-          </span>
         </a>
 
         {/* Desktop links */}
