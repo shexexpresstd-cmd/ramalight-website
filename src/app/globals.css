@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-[#fcfcfd] text-gray-900 antialiased; }
+}
+
+@layer components {
+  .section-pad { @apply py-24 px-6 lg:px-12; }
+  .container-xl { @apply max-w-7xl mx-auto; }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f0c040, #c8960c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Hero glow effects */
+.hero-glow-1 {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(200,150,12,0.04) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hero-glow-2 {
+  position: absolute;
+  bottom: -15%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(26,54,93,0.3) 0%, transparent 65%);
+  border-radius: 50%;
+}
+
+/* Pulse animation */
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
