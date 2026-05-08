@@ -49,8 +49,8 @@ function AnimatedCounter({ target, suffix = '', decimals = 0 }: { target: number
 const items = [
   { target: 10, suffix: '%', desc: 'Active Chlorine Concentration' },
   { target: 10, suffix: '+', desc: 'Tons Produced Daily' },
-  { target: 91, suffix: ' KES', desc: 'Price Per Unit (Retail)' },
-  { target: 72.5, suffix: '%', desc: 'Profit Margin', decimals: 1 },
+  { target: 3600, suffix: '', desc: 'Tons Annual Production' },
+  { target: 6, suffix: ' Months', desc: 'Product Shelf Life' },
 ];
 
 export default function Stats() {
@@ -84,7 +84,7 @@ export default function Stats() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="text-4xl font-black text-brand tracking-[-1px]">
-                  <AnimatedCounter target={item.target} suffix={item.suffix} decimals={item.decimals} />
+                  <AnimatedCounter target={item.target} suffix={item.suffix} />
                 </div>
                 <div className="text-sm text-slate-400 font-medium mt-1">
                   {item.desc}
