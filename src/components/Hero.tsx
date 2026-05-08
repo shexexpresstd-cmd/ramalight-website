@@ -26,8 +26,8 @@ export default function Hero() {
 
   const stats = [
     { num: '10+', label: 'Tons Daily Capacity', accent: true },
-    { num: '91 KES', label: 'Price Per Unit', accent: false },
     { num: '3,600', label: 'Annual Tonnage', accent: false },
+    { num: '6', label: 'Months Shelf Life', accent: false },
   ];
 
   return (
@@ -119,7 +119,7 @@ export default function Hero() {
           >
             <motion.button
               onClick={() => scrollTo('contact')}
-              className="w-full sm:w-auto px-8 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg shadow-[0_4px_20px_rgba(59,130,246,0.25)] inline-flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg shadow-[0_4px_20px_rgba(13,51,32,0.25)] inline-flex items-center justify-center gap-2 group"
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -171,7 +171,7 @@ export default function Hero() {
         >
           {/* Floating badge */}
           <motion.div
-            className="absolute -top-3 -right-3 bg-gradient-to-br from-accent to-accent-light text-white px-5 py-2 rounded-full text-xs font-bold shadow-[0_4px_20px_rgba(59,130,246,0.4)] z-10 flex items-center gap-1.5"
+            className="absolute -top-3 -right-3 bg-gradient-to-br from-accent to-accent-light text-white px-5 py-2 rounded-full text-xs font-bold shadow-[0_4px_20px_rgba(13,51,32,0.4)] z-10 flex items-center gap-1.5"
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
@@ -213,7 +213,7 @@ export default function Hero() {
                 <motion.div
                   key={key}
                   className="bg-white/[0.03] rounded-lg py-3"
-                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(59,130,246,0.08)' }}
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(13,51,32,0.08)' }}
                 >
                   <div className="text-sm font-bold text-white">{val}</div>
                   <div className="text-[10px] text-white/25 mt-0.5">{key}</div>

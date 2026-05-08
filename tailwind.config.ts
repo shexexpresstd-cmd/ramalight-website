@@ -13,6 +13,11 @@ module.exports = {
           400: '#2d5fa0',
         },
         accent: {
+          DEFAULT: '#0d3320',
+          light: '#1a5c3a',
+          pale: '#ecfdf5',
+        },
+        blue: {
           DEFAULT: '#3b82f6',
           light: '#60a5fa',
           pale: '#eff6ff',

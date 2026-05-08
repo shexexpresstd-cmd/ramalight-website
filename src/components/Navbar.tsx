@@ -27,12 +27,13 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[72px]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-3">
         <a href="#" className="flex items-center shrink-0">
           <img
             src="/logo.png"
             alt="RAMALIGHT CO. LIMITED"
-            className="h-12 w-auto"
+            className="h-16 lg:h-20 w-auto"
+            style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
           />
         </a>
 

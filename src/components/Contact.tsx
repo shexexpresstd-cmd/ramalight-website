@@ -56,7 +56,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, [key]: e.target.value })
                   }
-                  className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(59,130,246,0.08)] transition-all"
+                  className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(13,51,32,0.08)] transition-all"
                   required
                 />
               </div>
@@ -68,13 +68,13 @@ export default function Contact() {
               <textarea
                 value={form.msg}
                 onChange={(e) => setForm({ ...form, msg: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(59,130,246,0.08)] transition-all resize-y h-32"
+                className="w-full px-4 py-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-accent focus:shadow-[0_0_0_3px_rgba(13,51,32,0.08)] transition-all resize-y h-32"
                 required
               />
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(59,130,246,0.35)] transition-all inline-flex items-center justify-center gap-2"
+              className="w-full px-6 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(13,51,32,0.35)] transition-all inline-flex items-center justify-center gap-2"
             >
               <Send size={18} /> Send Inquiry
             </button>
