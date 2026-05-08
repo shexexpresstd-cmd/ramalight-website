@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[66px] relative">
         {/* Logo — absolutely positioned, extends beyond header */}
-        <a href="#" className="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 z-50">
+        <a href="#" className="absolute left-6 lg:left-12 top-[55%] -translate-y-1/2 z-50">
           <img
             src="/logo.png"
             alt="RAMALIGHT CO. LIMITED"
