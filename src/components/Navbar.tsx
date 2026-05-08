@@ -41,7 +41,7 @@ export default function Navbar() {
           <a href="tel:+254724806736" className="px-5 py-2.5 rounded-md text-[13px] font-semibold border border-white/10 text-white hover:border-accent-light/50 hover:text-accent-light transition-all duration-200 mr-1">
             +254 724 806 736
           </a>
-          <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(13,51,32,0.35)] transition-all duration-200">
+          <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(48,120,80,0.35)] transition-all duration-200">
             Get a Quote
           </a>
         </div>

@@ -5,16 +5,16 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#0a1628',
-          50: '#0f2040',
-          100: '#132952',
-          200: '#1a3a6b',
-          300: '#244b85',
+          DEFAULT: '#101820',
+          50: '#182430',
+          100: '#1e2e3c',
+          200: '#283848',
+          300: '#344a5e',
         },
         accent: {
-          DEFAULT: '#0d3320',
-          light: '#1a5c3a',
-          lighter: '#22c55e',
+          DEFAULT: '#307850',
+          light: '#408058',
+          lighter: '#50a870',
           pale: '#ecfdf5',
         },
         surface: {

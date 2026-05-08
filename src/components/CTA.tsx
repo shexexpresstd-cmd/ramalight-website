@@ -22,7 +22,7 @@ export default function CTA() {
           Get a customized quote for your bulk sodium hypochlorite needs. We&apos;ll respond within 24 hours.
         </motion.p>
         <motion.button onClick={() => scrollTo('contact')}
-          className="px-10 py-4 text-lg font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg inline-flex items-center gap-2 group hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(13,51,32,0.35)] transition-all"
+          className="px-10 py-4 text-lg font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg inline-flex items-center gap-2 group hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(48,120,80,0.35)] transition-all"
           whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
           initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
           Request Your Quote

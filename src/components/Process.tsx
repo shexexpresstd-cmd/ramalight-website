@@ -25,7 +25,7 @@ export default function Process() {
           {steps.map((s, i) => (
             <motion.div key={s.step} className="text-center group"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center font-extrabold text-sm mx-auto mb-4 shadow-[0_4px_16px_rgba(13,51,32,0.25)] group-hover:scale-110 transition-transform font-syne">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center font-extrabold text-sm mx-auto mb-4 shadow-[0_4px_16px_rgba(48,120,80,0.25)] group-hover:scale-110 transition-transform font-syne">
                 {s.step}
               </div>
               <h4 className="text-base font-bold text-muted-900 mb-2">{s.title}</h4>

@@ -8,7 +8,7 @@
   html { scroll-behavior: smooth; }
   body {
     @apply font-sans antialiased;
-    background: #0a1628;
+    background: #101820;
     color: #101828;
     overflow-x: hidden;
   }
@@ -28,10 +28,10 @@
     display: inline-block;
     width: 24px;
     height: 2px;
-    background: linear-gradient(90deg, #1a5c3a, #0d3320);
+    background: linear-gradient(90deg, #408058, #307850);
   }
   .text-gradient-accent {
-    background: linear-gradient(135deg, #1a5c3a, #0d3320);
+    background: linear-gradient(135deg, #408058, #307850);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -40,40 +40,32 @@
 
 @layer utilities {
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #0a1628; }
-  ::-webkit-scrollbar-thumb { background: #0d3320; border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: #101820; }
+  ::-webkit-scrollbar-thumb { background: #307850; border-radius: 3px; }
 }
 
-* { scrollbar-width: thin; scrollbar-color: #0d3320 #0a1628; }
+* { scrollbar-width: thin; scrollbar-color: #307850 #101820; }
 
 /* ── CURSOR ── */
 .cursor {
-  position: fixed;
-  width: 12px; height: 12px;
-  background: #1a5c3a;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
+  position: fixed; width: 12px; height: 12px;
+  background: #408058; border-radius: 50%; pointer-events: none; z-index: 9999;
   transform: translate(-50%,-50%);
   transition: transform 0.1s, width 0.3s, height 0.3s, opacity 0.3s;
   mix-blend-mode: difference;
 }
 .cursor-ring {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1.5px solid rgba(13,51,32,0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
+  position: fixed; width: 36px; height: 36px;
+  border: 1.5px solid rgba(48,120,80,0.4); border-radius: 50%; pointer-events: none; z-index: 9998;
   transform: translate(-50%,-50%);
   transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
 }
 
 /* ── LOADER ── */
-.loader { position: fixed; inset: 0; background: #0a1628; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
+.loader { position: fixed; inset: 0; background: #101820; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
 .loader.hidden { opacity: 0; visibility: hidden; }
 .loader-bar { width: 200px; height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; overflow: hidden; margin: 28px auto 0; }
-.loader-fill { height: 100%; background: linear-gradient(90deg,#0d3320,#1a5c3a); border-radius: 1px; animation: loadfill 1.8s ease forwards; }
+.loader-fill { height: 100%; background: linear-gradient(90deg,#307850,#408058); border-radius: 1px; animation: loadfill 1.8s ease forwards; }
 @keyframes loadfill { from { width: 0; } to { width: 100%; } }
 
 /* ── ANIMATIONS ── */

@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)', backgroundSize: '72px 72px' }} />
 
       {/* Orbs */}
-      <div className="absolute top-[-15%] right-[-8%] w-[800px] h-[800px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(13,51,32,0.06) 0%, transparent 65%)', animation: 'orbFloat 8s ease-in-out infinite' }} />
+      <div className="absolute top-[-15%] right-[-8%] w-[800px] h-[800px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(48,120,80,0.06) 0%, transparent 65%)', animation: 'orbFloat 8s ease-in-out infinite' }} />
       <div className="absolute bottom-[-20%] left-[-5%] w-[600px] h-[600px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(22,99,52,0.08) 0%, transparent 65%)', animation: 'orbFloat 10s ease-in-out infinite reverse' }} />
       <div className="absolute top-[40%] left-[40%] w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(42,74,127,0.12) 0%, transparent 65%)', animation: 'orbFloat 12s ease-in-out infinite 2s' }} />
 
@@ -62,7 +62,7 @@ export default function Hero() {
 
           <motion.div className="flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}>
-            <button onClick={() => scrollTo('contact')} className="w-full sm:w-auto px-8 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg shadow-[0_4px_20px_rgba(13,51,32,0.2)] inline-flex items-center justify-center gap-2 group hover:-translate-y-0.5 transition-transform">
+            <button onClick={() => scrollTo('contact')} className="w-full sm:w-auto px-8 py-4 text-base font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg shadow-[0_4px_20px_rgba(48,120,80,0.2)] inline-flex items-center justify-center gap-2 group hover:-translate-y-0.5 transition-transform">
               Request a Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -87,7 +87,7 @@ export default function Hero() {
         <motion.div className="relative shrink-0"
           initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.5, duration: 0.7 }}
           style={{ transform: `translate(${mouse.x * -15}px, ${mouse.y * -15}px)` }}>
-          <div className="absolute -top-2 -right-2 bg-gradient-to-br from-accent to-accent-light text-white px-4 py-2 rounded-full text-xs font-bold shadow-[0_4px_20px_rgba(13,51,32,0.3)] z-10 flex items-center gap-1.5"
+          <div className="absolute -top-2 -right-2 bg-gradient-to-br from-accent to-accent-light text-white px-4 py-2 rounded-full text-xs font-bold shadow-[0_4px_20px_rgba(48,120,80,0.3)] z-10 flex items-center gap-1.5"
             style={{ animation: 'orbFloat 3s ease-in-out infinite' }}>
             <Beaker size={12} /> 10–15% NaOCl
           </div>
