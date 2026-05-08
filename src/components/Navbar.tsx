@@ -65,7 +65,7 @@ export default function Navbar() {
             href="tel:+254724806736"
             className="flex items-center gap-1.5 text-sm text-white/55 hover:text-white transition-colors"
           >
-            <Phone size={14} /> 0724 806 736
+            <Phone size={14} /> +254 724 806 736
           </a>
           <motion.button
             className="px-5 py-2.5 text-sm font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-md"
@@ -113,7 +113,7 @@ export default function Navbar() {
                 href="tel:+254724806736"
                 className="flex-1 px-4 py-2.5 text-sm font-semibold text-white border border-white/15 rounded-md text-center"
               >
-                Call 0724 806 736
+                Call +254 724 806 736
               </a>
               <button className="flex-1 px-4 py-2.5 text-sm font-semibold bg-accent text-white rounded-md">
                 Get a Quote

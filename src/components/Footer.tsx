@@ -7,7 +7,7 @@ export default function Footer() {
     ],
     [
       'Contact',
-      ['info@ramalight.co.ke', '0724 806 736', 'Kenya, East Africa', 'Mon–Fri: 8AM–5PM'],
+      ['info@ramalight.co.ke', '+254 724 806 736', 'Kenya, East Africa', 'Mon–Fri: 8AM–5PM'],
     ],
   ];
 

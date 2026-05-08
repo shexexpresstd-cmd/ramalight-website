@@ -14,7 +14,7 @@ export default function Contact() {
 
   const contacts = [
     { icon: Mail, title: 'Email', detail: 'info@ramalight.co.ke' },
-    { icon: Phone, title: 'Phone', detail: '0724 806 736' },
+    { icon: Phone, title: 'Phone', detail: '+254 724 806 736' },
     { icon: MapPin, title: 'Location', detail: 'Kenya, East Africa' },
     { icon: Clock, title: 'Business Hours', detail: 'Mon–Fri · 8AM–5PM' },
   ];

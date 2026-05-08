@@ -13,7 +13,7 @@ const specs = [
   ['Shelf Life', '6 Months (proper storage conditions)'],
   ['Standards', 'KS / EAS / KEBS Compliant'],
   ['Manufacturer', 'RAMALIGHT CO. LIMITED, Kenya'],
-  ['Contact', 'info@ramalight.co.ke · 0724 806 736'],
+  ['Contact', 'info@ramalight.co.ke · +254 724 806 736'],
 ];
 
 export default function Specifications() {
