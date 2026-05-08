@@ -34,7 +34,7 @@ export default function Process() {
             <AnimateIn key={title} delay={i * 0.2}>
               <div className="relative text-center">
                 <motion.div
-                  className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 text-white flex items-center justify-center font-extrabold text-base mx-auto mb-4 shadow-lg"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent-light text-white flex items-center justify-center font-extrabold text-base mx-auto mb-4 shadow-lg"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   {i + 1}

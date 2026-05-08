@@ -5,7 +5,7 @@ const testimonials = [
       'Consistent quality and reliable delivery. Ramalight has been our sole bleach supplier for water treatment operations across three counties.',
     name: 'John Kamau',
     company: 'Water Treatment Co. Ltd',
-    bg: 'bg-brand-100',
+    bg: 'bg-accent',
   },
   {
     stars: 5,

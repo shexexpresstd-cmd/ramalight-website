@@ -13,21 +13,18 @@ const reasons = [
 export default function WhyUs() {
   return (
     <section className="section-pad bg-slate-50 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-
       <div className="container-xl relative z-10">
         <AnimateIn>
           <div className="flex items-center gap-3 mb-3">
-            <span className="w-5 h-0.5 bg-accent-light" />
-            <span className="text-xs font-bold tracking-[2px] uppercase text-accent-light">
+            <span className="w-5 h-0.5 bg-accent" />
+            <span className="text-xs font-bold tracking-[2px] uppercase text-accent">
               Why Ramalight
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4 text-white">
-            Why Choose <span className="text-accent-light">Our Bleach</span>
+          <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4 text-slate-900">
+            Why Choose <span className="text-accent">Our Bleach</span>
           </h2>
-          <p className="text-lg text-white/40 max-w-[600px] mb-12">
+          <p className="text-lg text-slate-500 max-w-[600px] mb-12">
             We don&apos;t just manufacture chemicals — we deliver quality,
             consistency, and partnership.
           </p>
@@ -42,7 +39,7 @@ export default function WhyUs() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.div
-                  className="text-5xl font-black text-accent-light tracking-[-1px] mb-3"
+                  className="text-5xl font-black text-accent tracking-[-1px] mb-3"
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -50,8 +47,8 @@ export default function WhyUs() {
                 >
                   {r.num}
                 </motion.div>
-                <h4 className="text-base font-bold text-white mb-2">{r.title}</h4>
-                <p className="text-sm text-white/35 leading-relaxed">{r.desc}</p>
+                <h4 className="text-base font-bold text-slate-800 mb-2">{r.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">{r.desc}</p>
               </motion.div>
             </AnimateIn>
           ))}
