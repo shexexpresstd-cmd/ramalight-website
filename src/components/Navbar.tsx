@@ -17,11 +17,11 @@ export default function Navbar() {
   const links = ['Home', 'Products', 'Specifications', 'About', 'Contact'];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] py-3.5 transition-all duration-[400ms] ${
-      scrolled ? 'bg-white/95 backdrop-blur-2xl py-2 border-b border-slate-100 shadow-sm' : 'bg-surface-50'
+    <nav className={`fixed top-0 left-0 right-0 z-[100] py-0 transition-all duration-[400ms] overflow-visible ${
+      scrolled ? 'bg-white/95 backdrop-blur-2xl border-b border-slate-100 shadow-sm' : 'bg-surface-50'
     }`}>
-      <div className="container-xl flex items-center justify-between px-10">
-        <a href="#" className="flex items-center no-underline">
+      <div className="container-xl flex items-center justify-between px-10 h-[110px] relative">
+        <a href="#" className="flex items-center no-underline -my-[45px]">
           <img src="/logo.png" alt="RAMALIGHT" className="h-[200px] w-auto" />
         </a>
 
