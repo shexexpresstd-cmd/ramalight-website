@@ -22,7 +22,7 @@ export default function Navbar() {
     }`}>
       <div className="container-xl flex items-center justify-between px-10">
         <a href="#" className="flex items-center no-underline">
-          <img src="/logo.png" alt="RAMALIGHT" className="h-16 w-auto" />
+          <img src="/logo.png" alt="RAMALIGHT" className="h-[200px] w-auto" />
         </a>
 
         <ul className="hidden lg:flex gap-8 items-center">

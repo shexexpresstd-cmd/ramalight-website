@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container-xl px-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div>
-            <img src="/logo.png" alt="RAMALIGHT CO. LIMITED" className="h-14 w-auto mb-4 " />
+            <img src="/logo.png" alt="RAMALIGHT CO. LIMITED" className="h-[150px] w-auto mb-4 " />
             <p className="text-sm text-muted-500 leading-relaxed mb-4">
               RAMALIGHT CO. LIMITED — East Africa&apos;s premier manufacturer
               of industrial-grade sodium hypochlorite. Quality. Consistency. Trust.
