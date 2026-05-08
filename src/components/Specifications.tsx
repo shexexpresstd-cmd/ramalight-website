@@ -19,7 +19,7 @@ export default function Specifications() {
       <div className="container-xl px-10">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div className="section-tag justify-center">Product</div>
-          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Technical <span className="text-gradient-gold">Specifications</span></h2>
+          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Technical <span className="text-gradient-accent">Specifications</span></h2>
           <p className="text-[17px] text-muted-500 leading-relaxed max-w-[580px] mx-auto">
             Premium industrial-grade sodium hypochlorite manufactured to international standards.
           </p>
@@ -27,10 +27,10 @@ export default function Specifications() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {specs.map((s, i) => (
-            <motion.div key={s.label} className="bg-white p-6 rounded-xl border border-surface-200 hover:border-gold/20 transition-colors"
+            <motion.div key={s.label} className="bg-white p-6 rounded-xl border border-surface-200 hover:border-accent/20 transition-colors"
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
-              <div className="text-[11px] font-bold tracking-[2px] uppercase text-gold mb-2">{s.label}</div>
-              <div className="text-[22px] font-black text-navy tracking-[-0.5px] mb-1 font-syne">{s.value}</div>
+              <div className="text-[11px] font-bold tracking-[2px] uppercase text-accent mb-2">{s.label}</div>
+              <div className="text-[22px] font-black text-brand tracking-[-0.5px] mb-1 font-syne">{s.value}</div>
               <div className="text-[13px] text-muted-400">{s.note}</div>
             </motion.div>
           ))}

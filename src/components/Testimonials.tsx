@@ -15,7 +15,7 @@ export default function Testimonials() {
       <div className="container-xl px-10">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div className="section-tag justify-center">Testimonials</div>
-          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Trusted By <span className="text-gradient-gold">Industry Leaders</span></h2>
+          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Trusted By <span className="text-gradient-accent">Industry Leaders</span></h2>
           <p className="text-[17px] text-muted-500 leading-relaxed max-w-[580px] mx-auto">
             Hear from the businesses that rely on Ramalight for their chemical supply needs.
           </p>
@@ -25,10 +25,10 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <motion.div key={t.name} className="bg-white p-8 rounded-xl border border-surface-200 relative hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}>
-              <Quote size={32} className="text-gold/20 mb-4" />
+              <Quote size={32} className="text-accent/20 mb-4" />
               <p className="text-[15px] text-muted-600 leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-xs font-bold text-navy">{t.name}</div>
+                <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center text-xs font-bold text-brand">{t.name}</div>
                 <div>
                   <div className="text-sm font-semibold text-muted-900">{t.name}</div>
                   <div className="text-xs text-muted-400">{t.role}</div>

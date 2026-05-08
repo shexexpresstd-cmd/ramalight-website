@@ -6,12 +6,12 @@ export default function Ticker() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="bg-gradient-to-r from-gold to-gold-light py-3 overflow-hidden relative">
+    <div className="bg-gradient-to-r from-accent to-accent-light py-3 overflow-hidden relative">
       <div className="flex gap-0 w-max" style={{ animation: 'tickerScroll 25s linear infinite' }}>
         {doubled.map((t, i) => (
-          <div key={i} className="flex items-center gap-3 px-8 text-[13px] font-bold text-navy whitespace-nowrap font-syne tracking-[0.5px]">
+          <div key={i} className="flex items-center gap-3 px-8 text-[13px] font-bold text-brand whitespace-nowrap font-syne tracking-[0.5px]">
             {t}
-            <div className="w-1 h-1 bg-navy rounded-full opacity-40" />
+            <div className="w-1 h-1 bg-brand rounded-full opacity-40" />
           </div>
         ))}
       </div>

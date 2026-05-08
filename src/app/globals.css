@@ -8,7 +8,7 @@
   html { scroll-behavior: smooth; }
   body {
     @apply font-sans antialiased;
-    background: #060e1a;
+    background: #0a1628;
     color: #101828;
     overflow-x: hidden;
   }
@@ -17,10 +17,10 @@
 @layer components {
   .container-xl { @apply max-w-[1280px] mx-auto; }
   .section { @apply py-[110px]; }
-  .section-dark { @apply bg-navy-50; }
+  .section-dark { @apply bg-brand-50; }
   .section-gray { @apply bg-[#f8f9fb]; }
   .section-tag {
-    @apply text-[11px] font-bold tracking-[2.5px] uppercase text-gold flex items-center gap-2.5 mb-3.5;
+    @apply text-[11px] font-bold tracking-[2.5px] uppercase text-accent flex items-center gap-2.5 mb-3.5;
     font-family: 'DM Sans', sans-serif;
   }
   .section-tag::before {
@@ -28,10 +28,10 @@
     display: inline-block;
     width: 24px;
     height: 2px;
-    background: linear-gradient(90deg, #c8960c, #f0c040);
+    background: linear-gradient(90deg, #1a5c3a, #0d3320);
   }
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #f0c040, #c8960c);
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #1a5c3a, #0d3320);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -40,18 +40,17 @@
 
 @layer utilities {
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #060e1a; }
-  ::-webkit-scrollbar-thumb { background: #c8960c; border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: #0a1628; }
+  ::-webkit-scrollbar-thumb { background: #0d3320; border-radius: 3px; }
 }
 
-/* Scrollbar Firefox */
-* { scrollbar-width: thin; scrollbar-color: #c8960c #060e1a; }
+* { scrollbar-width: thin; scrollbar-color: #0d3320 #0a1628; }
 
 /* ── CURSOR ── */
 .cursor {
   position: fixed;
   width: 12px; height: 12px;
-  background: #f0c040;
+  background: #1a5c3a;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -62,7 +61,7 @@
 .cursor-ring {
   position: fixed;
   width: 36px; height: 36px;
-  border: 1.5px solid rgba(240,192,64,0.4);
+  border: 1.5px solid rgba(13,51,32,0.4);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -71,14 +70,13 @@
 }
 
 /* ── LOADER ── */
-.loader { position: fixed; inset: 0; background: #060e1a; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
+.loader { position: fixed; inset: 0; background: #0a1628; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
 .loader.hidden { opacity: 0; visibility: hidden; }
 .loader-bar { width: 200px; height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; overflow: hidden; margin: 28px auto 0; }
-.loader-fill { height: 100%; background: linear-gradient(90deg,#c8960c,#f0c040); border-radius: 1px; animation: loadfill 1.8s ease forwards; }
+.loader-fill { height: 100%; background: linear-gradient(90deg,#0d3320,#1a5c3a); border-radius: 1px; animation: loadfill 1.8s ease forwards; }
 @keyframes loadfill { from { width: 0; } to { width: 100%; } }
 
 /* ── ANIMATIONS ── */
-@keyframes gridDrift { from { transform: translate(0,0); } to { transform: translate(8px,8px); } }
 @keyframes orbFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-30px) scale(1.05); } }
 @keyframes particleRise { 0% { opacity: 0; transform: translateY(100vh) scale(0); } 10% { opacity: 0.6; } 90% { opacity: 0.2; } 100% { opacity: 0; transform: translateY(-100px) scale(1.5); } }
 @keyframes scrollDown { 0% { top: -100%; } 100% { top: 200%; } }

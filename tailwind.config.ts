@@ -4,18 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: '#060e1a',
-          50: '#0a1628',
-          100: '#0f1f35',
-          200: '#1a365d',
-          300: '#2a4a7f',
+        brand: {
+          DEFAULT: '#0a1628',
+          50: '#0f2040',
+          100: '#132952',
+          200: '#1a3a6b',
+          300: '#244b85',
         },
-        gold: {
-          DEFAULT: '#c8960c',
-          light: '#f0c040',
-          pale: '#fef9e7',
-          2: '#e8a020',
+        accent: {
+          DEFAULT: '#0d3320',
+          light: '#1a5c3a',
+          lighter: '#22c55e',
+          pale: '#ecfdf5',
         },
         surface: {
           DEFAULT: '#ffffff',

@@ -6,7 +6,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-navy pt-16 pb-8">
+    <footer className="bg-brand pt-16 pb-8">
       <div className="container-xl px-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div>
@@ -24,7 +24,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {(items as string[]).map(l => (
                   <li key={l}>
-                    <a href="#" className="text-sm text-white/30 hover:text-gold-light transition-colors duration-200">{l}</a>
+                    <a href="#" className="text-sm text-white/30 hover:text-accent-light transition-colors duration-200">{l}</a>
                   </li>
                 ))}
               </ul>
