@@ -38,8 +38,8 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-2.5">
-          <a href="tel:+254724806736" className="px-5 py-2.5 rounded-md text-[13px] font-semibold border border-slate-200 text-muted-600 hover:border-accent hover:text-accent transition-all duration-200 mr-1">
-            +254 724 806 736
+          <a href="https://wa.me/254724806736" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-[#25D366] text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(37,211,102,0.35)] transition-all duration-200 mr-1">
+            <span className="flex items-center gap-1.5">+254 724 806 736</span>
           </a>
           <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-brand text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(16,24,32,0.35)] transition-all duration-200">
             Get a Quote
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <li key={l}><a href="#" className="text-muted-600 hover:text-accent text-sm font-medium" onClick={() => setMenuOpen(false)}>{l}</a></li>
               ))}
             </ul>
-            <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-muted-700 border border-slate-200 rounded-md mb-2">+254 724 806 736</a>
+            <a href="https://wa.me/254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold bg-[#25D366] text-white rounded-md mb-2">+254 724 806 736</a>
             <a href="#contact" className="block w-full text-center px-4 py-2.5 text-sm font-semibold bg-brand text-white rounded-md">Get a Quote</a>
           </motion.div>
         )}
