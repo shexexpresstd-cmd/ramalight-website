@@ -18,22 +18,22 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-visible ${
         scrolled
-          ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-1.5'
-          : 'bg-white/95 backdrop-blur py-3'
+          ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-1'
+          : 'bg-white/95 backdrop-blur py-2'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <div className="container-xl flex items-center justify-between px-6 lg:px-12">
+      <div className="container-xl flex items-center justify-between px-6 lg:px-12 overflow-visible">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="#" className="flex items-center group -my-3">
           <motion.img
             src="/logo.png"
             alt="RAMALIGHT"
-            className="h-[150px] w-auto"
+            className="h-[150px] w-auto -my-4"
             whileHover={{ scale: 1.03 }}
             style={{ filter: 'brightness(1.05) saturate(1.1)' }}
           />
