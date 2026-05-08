@@ -41,7 +41,7 @@ export default function Navbar() {
           <a href="tel:+254724806736" className="px-5 py-2.5 rounded-md text-[13px] font-semibold border border-slate-200 text-muted-600 hover:border-accent hover:text-accent transition-all duration-200 mr-1">
             +254 724 806 736
           </a>
-          <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-gradient-to-br from-accent to-accent-light text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(48,120,80,0.35)] transition-all duration-200">
+          <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-brand text-white hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(16,24,32,0.35)] transition-all duration-200">
             Get a Quote
           </a>
         </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
               ))}
             </ul>
             <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-muted-700 border border-slate-200 rounded-md mb-2">+254 724 806 736</a>
-            <a href="#contact" className="block w-full text-center px-4 py-2.5 text-sm font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-md">Get a Quote</a>
+            <a href="#contact" className="block w-full text-center px-4 py-2.5 text-sm font-semibold bg-brand text-white rounded-md">Get a Quote</a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -8,8 +8,8 @@
   html { scroll-behavior: smooth; }
   body {
     @apply font-sans antialiased;
-    background: #101820;
-    color: #101828;
+    background: #f8f9fb;
+    color: #1d2939;
     overflow-x: hidden;
   }
 }
@@ -62,9 +62,9 @@
 }
 
 /* ── LOADER ── */
-.loader { position: fixed; inset: 0; background: #101820; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
+.loader { position: fixed; inset: 0; background: #f8f9fb; z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease; }
 .loader.hidden { opacity: 0; visibility: hidden; }
-.loader-bar { width: 200px; height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; overflow: hidden; margin: 28px auto 0; }
+.loader-bar { width: 200px; height: 2px; background: rgba(0,0,0,0.06); border-radius: 1px; overflow: hidden; margin: 28px auto 0; }
 .loader-fill { height: 100%; background: linear-gradient(90deg,#307850,#408058); border-radius: 1px; animation: loadfill 1.8s ease forwards; }
 @keyframes loadfill { from { width: 0; } to { width: 100%; } }
 

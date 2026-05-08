@@ -29,8 +29,8 @@ export default function Home() {
       {/* Loader */}
       <div className={`loader ${loaded ? 'hidden' : ''}`}>
         <div className="text-center">
-          <div className="font-syne text-[32px] font-extrabold text-white tracking-[-1px] mb-0">
-            RAMALIGHT<span className="text-accent-light">.</span>
+          <div className="font-syne text-[32px] font-extrabold text-muted-900 tracking-[-1px] mb-0">
+            RAMALIGHT<span className="text-accent">.</span>
           </div>
           <div className="loader-bar">
             <div className="loader-fill" />
