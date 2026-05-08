@@ -29,12 +29,13 @@ export default function Navbar() {
     >
       <div className="container-xl flex items-center justify-between px-6 lg:px-12">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
+        <a href="#" className="flex items-center group">
           <motion.img
-            src="/logo.jpg"
+            src="/logo.png"
             alt="RAMALIGHT"
-            className="h-10 w-auto"
-            whileHover={{ scale: 1.05 }}
+            className="h-16 w-auto"
+            whileHover={{ scale: 1.03 }}
+            style={{ filter: 'brightness(1.05) saturate(1.1)' }}
           />
         </a>
 
