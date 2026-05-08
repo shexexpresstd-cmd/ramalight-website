@@ -10,15 +10,15 @@ export default function Process() {
     <section className="section-pad">
       <div className="container-xl">
         <div className="flex items-center gap-3 mb-3">
-          <span className="w-5 h-0.5 bg-gold" />
-          <span className="text-xs font-bold tracking-[2px] uppercase text-gold">
+          <span className="w-5 h-0.5 bg-accent" />
+          <span className="text-xs font-bold tracking-[2px] uppercase text-accent">
             Process
           </span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4">
-          How <span className="text-gold">It Works</span>
+          How <span className="text-accent">It Works</span>
         </h2>
-        <p className="text-lg text-gray-500 max-w-[600px] mb-12">
+        <p className="text-lg text-slate-500 max-w-[600px] mb-12">
           From inquiry to delivery — a seamless process for industrial buyers.
         </p>
 
@@ -26,17 +26,17 @@ export default function Process() {
           {['Inquiry', 'Quote & Confirm', 'Production', 'Delivery'].map(
             (title, i) => (
               <div key={title} className="relative text-center">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-navy-100 to-navy-200 text-white flex items-center justify-center font-extrabold text-base mx-auto mb-4">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 text-white flex items-center justify-center font-extrabold text-base mx-auto mb-4">
                   {i + 1}
                 </div>
-                <h4 className="text-base font-bold text-gray-900 mb-1.5">
+                <h4 className="text-base font-bold text-slate-900 mb-1.5">
                   {title}
                 </h4>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-slate-500 leading-relaxed">
                   {steps[i]}
                 </p>
                 {i < 3 && (
-                  <span className="hidden lg:block absolute -right-3 top-[14px] text-gray-300 text-xl">
+                  <span className="hidden lg:block absolute -right-3 top-[14px] text-slate-300 text-xl">
                     →
                   </span>
                 )}

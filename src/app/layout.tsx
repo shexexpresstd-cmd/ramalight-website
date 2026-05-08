@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ramalight Industries – Sodium Hypochlorite Manufacturing',
+  title: 'RAMALIGHT CO. LIMITED – Sodium Hypochlorite Manufacturing',
   description:
     'Kenya\'s trusted producer of 10% industrial-grade sodium hypochlorite for water treatment, sanitation, agriculture, and commercial cleaning across East Africa.',
 };
