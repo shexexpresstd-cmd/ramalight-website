@@ -27,7 +27,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[66px] relative">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[80px] relative">
         {/* Logo — absolutely positioned, extends beyond header */}
         <a href="#" className="absolute left-6 lg:left-12 top-[55%] -translate-y-1/2 z-50">
           <img
