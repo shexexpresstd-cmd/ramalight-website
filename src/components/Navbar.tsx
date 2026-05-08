@@ -20,8 +20,8 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-brand/95 backdrop-blur-xl py-2.5 shadow-[0_1px_0_rgba(255,255,255,0.06)]'
-          : 'bg-transparent py-4'
+          ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-2.5'
+          : 'bg-white/95 backdrop-blur py-4'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -36,8 +36,8 @@ export default function Navbar() {
             className="h-9 w-auto rounded"
             whileHover={{ scale: 1.05 }}
           />
-          <span className="text-lg font-extrabold text-white tracking-[-0.4px] hidden sm:inline">
-            RAMALIGHT<span className="text-accent-light">.</span>
+          <span className="text-lg font-extrabold text-brand tracking-[-0.4px] hidden sm:inline">
+            RAMALIGHT<span className="text-accent">.</span>
           </span>
         </a>
 
@@ -49,8 +49,8 @@ export default function Navbar() {
                 href="#"
                 className={`transition-colors duration-200 ${
                   l === 'Home'
-                    ? 'text-white'
-                    : 'text-white/55 hover:text-white'
+                    ? 'text-accent'
+                    : 'text-slate-600 hover:text-accent'
                 }`}
               >
                 {l}
@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:+254724806736"
-            className="flex items-center gap-1.5 text-sm text-white/55 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-accent transition-colors"
           >
             <Phone size={14} /> +254 724 806 736
           </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-brand"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -89,7 +89,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="lg:hidden bg-brand/98 backdrop-blur-xl border-t border-white/5 px-6 py-6"
+            className="lg:hidden bg-white border-t border-slate-100 px-6 py-6"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -100,7 +100,7 @@ export default function Navbar() {
                 <li key={l}>
                   <a
                     href="#"
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-slate-600 hover:text-accent transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
                     {l}
@@ -111,7 +111,7 @@ export default function Navbar() {
             <div className="flex gap-2">
               <a
                 href="tel:+254724806736"
-                className="flex-1 px-4 py-2.5 text-sm font-semibold text-white border border-white/15 rounded-md text-center"
+                className="flex-1 px-4 py-2.5 text-sm font-semibold text-slate-700 border border-slate-200 rounded-md text-center"
               >
                 Call +254 724 806 736
               </a>
