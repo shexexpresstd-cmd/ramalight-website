@@ -4,62 +4,29 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section className="py-24 bg-accent-pale text-center relative overflow-hidden">
-      {/* Animated lines */}
+    <section className="py-24 bg-navy-50 text-center relative overflow-hidden">
       <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
-          animate={{ x: ['100%', '-100%'] }}
-          transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
-        />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
       </div>
-
-      <div className="container-xl px-6 relative z-10">
-        <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-[-1px] mb-3"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          Ready to <span className="text-accent">Partner</span> With Us?
+      <div className="container-xl px-10 relative z-10">
+        <motion.h2 className="font-syne text-4xl lg:text-5xl font-black text-white tracking-[-1px] mb-3"
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          Ready to <span className="text-gradient-gold">Partner</span> With Us?
         </motion.h2>
-        <motion.p
-          className="text-lg text-slate-500 max-w-[500px] mx-auto mb-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-        >
-          Get a customized quote for your bulk sodium hypochlorite needs.
-          We&apos;ll respond within 24 hours.
+        <motion.p className="text-lg text-white/40 max-w-[500px] mx-auto mb-8"
+          initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+          Get a customized quote for your bulk sodium hypochlorite needs. We&apos;ll respond within 24 hours.
         </motion.p>
-        <motion.button
-          onClick={() => scrollTo('contact')}
-          className="px-10 py-4 text-lg font-semibold bg-gradient-to-br from-accent to-accent-light text-white rounded-lg inline-flex items-center gap-2 group"
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.97 }}
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-        >
+        <motion.button onClick={() => scrollTo('contact')}
+          className="px-10 py-4 text-lg font-semibold bg-gradient-to-br from-gold to-gold-light text-navy rounded-lg inline-flex items-center gap-2 group hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,150,12,0.35)] transition-all"
+          whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
+          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
           Request Your Quote
-          <motion.span
-            animate={{ x: [0, 5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ArrowRight size={20} />
-          </motion.span>
+          <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </motion.button>
       </div>
     </section>

@@ -1,96 +1,38 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import AnimateIn from './AnimateIn';
+import { Factory, Shield, Truck, Clock } from 'lucide-react';
 
-function AnimatedCounter({ target, suffix = '', decimals = 0 }: { target: number; suffix?: string; decimals?: number }) {
-  const [count, setCount] = useState(0);
-  const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold: 0.5 }
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView) return;
-    let start = 0;
-    const duration = 1500;
-    const startTime = performance.now();
-
-    const animate = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      start = target * eased;
-      setCount(start);
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
-  }, [inView, target]);
-
-  return (
-    <span ref={ref}>
-      {count.toFixed(decimals)}
-      {suffix}
-    </span>
-  );
-}
-
-const items = [
-  { target: 10, suffix: '%', desc: 'Active Chlorine Concentration' },
-  { target: 10, suffix: '+', desc: 'Tons Produced Daily' },
-  { target: 3600, suffix: '', desc: 'Tons Annual Production' },
-  { target: 6, suffix: ' Months', desc: 'Product Shelf Life' },
+const stats = [
+  { icon: Factory, value: '10+', label: 'Tons Daily Production', sub: 'Continuous operation at our Kenya facility' },
+  { icon: Shield, value: '10–15%', label: 'Active Chlorine', sub: 'Consistent concentration, batch-tested' },
+  { icon: Truck, value: '3,600', label: 'Annual Tonnage', sub: 'Serving East Africa at scale' },
+  { icon: Clock, value: '6 Mo.', label: 'Shelf Life', sub: 'Properly stored, no degradation' },
 ];
 
 export default function Stats() {
   return (
-    <section className="section-pad bg-slate-50">
-      <div className="container-xl">
-        <AnimateIn>
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-5 h-0.5 bg-accent" />
-            <span className="text-xs font-bold tracking-[2px] uppercase text-accent">
-              By The Numbers
-            </span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4">
-            Manufacturing <span className="text-accent">Excellence</span>
-          </h2>
-          <p className="text-lg text-slate-500 max-w-[600px] mb-12">
-            RAMALIGHT CO. LIMITED delivers consistent, high-quality chemical
-            solutions at industrial scale.
+    <section className="section section-gray">
+      <div className="container-xl px-10">
+        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="section-tag justify-center">By The Numbers</div>
+          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Manufacturing <span className="text-gradient-gold">Excellence</span></h2>
+          <p className="text-[17px] text-muted-500 leading-relaxed max-w-[580px] mx-auto">
+            Ramalight Industries delivers consistent, high-quality chemical solutions at industrial scale across East Africa.
           </p>
-        </AnimateIn>
+        </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-          {items.map((item, i) => (
-            <AnimateIn key={item.desc} delay={i * 0.1}>
-              <motion.div
-                className="group relative bg-white border border-slate-200 rounded-xl p-7 text-center cursor-default
-                           before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-gradient-to-r before:from-accent before:to-accent-light before:opacity-0 before:transition-opacity
-                           hover:before:opacity-100"
-                whileHover={{ y: -4, boxShadow: '0 12px 40px rgba(0,0,0,0.06)' }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="text-4xl font-black text-brand tracking-[-1px]">
-                  <AnimatedCounter target={item.target} suffix={item.suffix} />
-                </div>
-                <div className="text-sm text-slate-400 font-medium mt-1">
-                  {item.desc}
-                </div>
-              </motion.div>
-            </AnimateIn>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          {stats.map((s, i) => (
+            <motion.div key={s.label} className="bg-white p-8 rounded-xl border border-surface-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:border-gold/20 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+              <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <s.icon size={22} className="text-gold-light" />
+              </div>
+              <div className="text-[36px] font-black text-navy tracking-[-1px] mb-1 font-syne">{s.value}</div>
+              <div className="text-[15px] font-semibold text-muted-800 mb-2">{s.label}</div>
+              <div className="text-[13px] text-muted-400 leading-relaxed">{s.sub}</div>
+            </motion.div>
           ))}
         </div>
       </div>

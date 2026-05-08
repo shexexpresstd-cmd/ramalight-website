@@ -1,76 +1,40 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Quote } from 'lucide-react';
+
 const testimonials = [
-  {
-    stars: 5,
-    quote:
-      'Consistent quality and reliable delivery. Ramalight has been our sole bleach supplier for water treatment operations across three counties.',
-    name: 'John Kamau',
-    company: 'Water Treatment Co. Ltd',
-    bg: 'bg-accent',
-  },
-  {
-    stars: 5,
-    quote:
-      'Their 10% sodium hypochlorite is exactly what we need for our food processing facility. Never had a quality issue in 2 years.',
-    name: 'Peter Otieno',
-    company: 'Kisumu Municipal',
-    bg: 'bg-accent',
-  },
-  {
-    stars: 5,
-    quote:
-      'As a bulk buyer for agricultural use, the pricing and packaging options are perfect. Great partnership.',
-    name: 'Mary Wanjiku',
-    company: 'Green Farms Kenya',
-    bg: 'bg-emerald-600',
-  },
+  { name: 'JK', role: 'Operations Director, Nairobi Water Co.', text: 'Ramalight has been our sole supplier for 3 years. Their consistency and delivery reliability are unmatched in the region.' },
+  { name: 'AL', role: 'Procurement Manager, Chem-Plus Uganda', text: 'We switched from imported bleach to Ramalight — saved 30% on costs with the same quality. Local delivery is a game changer.' },
+  { name: 'MD', role: 'CEO, Fresh Fields Agriculture', text: 'Their 200L drums keep our irrigation systems running. Quick response times and always in stock. Highly recommended.' },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="section-pad bg-slate-50">
-      <div className="container-xl">
-        <div className="flex items-center gap-3 mb-3">
-          <span className="w-5 h-0.5 bg-accent" />
-          <span className="text-xs font-bold tracking-[2px] uppercase text-accent">
-            Testimonials
-          </span>
-        </div>
-        <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4">
-          Trusted By <span className="text-accent">Industry Leaders</span>
-        </h2>
-        <p className="text-lg text-slate-500 max-w-[600px] mb-12">
-          Hear from the businesses that rely on Ramalight for their chemical
-          supply needs.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-white border border-slate-200 rounded-xl p-7"
-            >
-              <div className="text-accent text-sm mb-3">
-                {'★'.repeat(t.stars)}
-              </div>
-              <p className="text-sm text-slate-600 leading-relaxed italic mb-4">
-                &ldquo;{t.quote}&rdquo;
-              </p>
+    <section className="section section-gray">
+      <div className="container-xl px-10">
+        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="section-tag justify-center">Testimonials</div>
+          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Trusted By <span className="text-gradient-gold">Industry Leaders</span></h2>
+          <p className="text-[17px] text-muted-500 leading-relaxed max-w-[580px] mx-auto">
+            Hear from the businesses that rely on Ramalight for their chemical supply needs.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8 max-w-[900px] mx-auto">
+          {testimonials.map((t, i) => (
+            <motion.div key={t.name} className="bg-white p-8 rounded-xl border border-surface-200 relative hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all"
+              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}>
+              <Quote size={32} className="text-gold/20 mb-4" />
+              <p className="text-[15px] text-muted-600 leading-relaxed mb-6">&ldquo;{t.text}&rdquo;</p>
               <div className="flex items-center gap-3">
-                <div
-                  className={`w-9 h-9 rounded-full ${t.bg} flex items-center justify-center text-xs font-bold text-white`}
-                >
-                  {t.name
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </div>
+                <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-xs font-bold text-navy">{t.name}</div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-800">
-                    {t.name}
-                  </div>
-                  <div className="text-xs text-slate-400">{t.company}</div>
+                  <div className="text-sm font-semibold text-muted-900">{t.name}</div>
+                  <div className="text-xs text-muted-400">{t.role}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

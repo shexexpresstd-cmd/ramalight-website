@@ -1,71 +1,39 @@
 'use client';
 
-import AnimateIn from './AnimateIn';
-import NaOClMolecule from './NaOClMolecule';
+import { motion } from 'framer-motion';
 
 const specs = [
-  ['Chemical Formula', 'NaOCl'],
-  ['Concentration', '10% Available Chlorine ± 0.5% (Commercial)'],
-  ['Also Available', '12–15% Industrial Grade'],
-  ['Grade', 'Commercial / Industrial'],
-  ['Appearance', 'Clear, pale yellow-green liquid'],
-  ['Packaging', '5L · 20L jerrycans · 200L drums · 1000L IBC'],
-  ['Shelf Life', '6 Months (proper storage conditions)'],
-  ['Standards', 'KS / EAS / KEBS Compliant'],
-  ['Manufacturer', 'RAMALIGHT CO. LIMITED, Kenya'],
-  ['Contact', 'info@ramalight.co.ke · +254 724 806 736'],
+  { label: 'Active Chlorine', value: '10–15%', note: 'Commercial 10% / Industrial 12–15%' },
+  { label: 'Chemical Formula', value: 'NaOCl', note: 'Sodium Hypochlorite in aqueous solution' },
+  { label: 'Physical State', value: 'Liquid', note: 'Clear, pale yellow solution' },
+  { label: 'pH Value', value: '11–13', note: 'Alkaline solution for stability' },
+  { label: 'Free Alkali', value: '≤ 1.0%', note: 'As NaOH, ensuring minimal residue' },
+  { label: 'Standard', value: 'KS/KEBS', note: 'Kenya Bureau of Standards certified' },
+  { label: 'Packaging', value: '5L–1000L', note: 'Consumer to industrial bulk solutions' },
+  { label: 'Shelf Life', value: '6 Months', note: 'Stable when stored below 25°C' },
 ];
 
 export default function Specifications() {
   return (
-    <section id="specs" className="section-pad bg-slate-50">
-      <div className="container-xl">
-        <AnimateIn>
-          <div className="flex items-center gap-3 mb-3">
-            <span className="w-5 h-0.5 bg-accent" />
-            <span className="text-xs font-bold tracking-[2px] uppercase text-accent">
-              Product
-            </span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-black tracking-[-1px] mb-4">
-            Technical <span className="text-accent">Specifications</span>
-          </h2>
-          <p className="text-lg text-slate-500 max-w-[600px] mb-12">
-            Premium industrial-grade sodium hypochlorite manufactured to
-            international standards.
+    <section className="section section-gray" id="specs">
+      <div className="container-xl px-10">
+        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="section-tag justify-center">Product</div>
+          <h2 className="font-syne text-[46px] font-extrabold tracking-[-1.2px] leading-[1.1] mb-4">Technical <span className="text-gradient-gold">Specifications</span></h2>
+          <p className="text-[17px] text-muted-500 leading-relaxed max-w-[580px] mx-auto">
+            Premium industrial-grade sodium hypochlorite manufactured to international standards.
           </p>
-        </AnimateIn>
+        </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          {/* Molecule Visual */}
-          <AnimateIn delay={0.2}>
-            <div className="text-center shrink-0">
-              <NaOClMolecule className="w-64 h-56" />
-              <div className="text-sm font-semibold text-slate-700 mt-2">
-                Sodium Hypochlorite
-              </div>
-              <div className="text-xs text-slate-400">10%–15% Commercial &amp; Industrial Grade</div>
-            </div>
-          </AnimateIn>
-
-          {/* Specs list */}
-          <div className="flex-1 w-full">
-            {specs.map(([key, val], i) => (
-              <AnimateIn key={key} delay={i * 0.05}>
-                <div
-                  className={`flex items-center gap-4 py-3.5 ${
-                    i < specs.length - 1 ? 'border-b border-slate-100' : ''
-                  }`}
-                >
-                  <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
-                  <span className="w-44 text-sm font-semibold text-slate-700 shrink-0">
-                    {key}
-                  </span>
-                  <span className="text-sm text-slate-500">{val}</span>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {specs.map((s, i) => (
+            <motion.div key={s.label} className="bg-white p-6 rounded-xl border border-surface-200 hover:border-gold/20 transition-colors"
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
+              <div className="text-[11px] font-bold tracking-[2px] uppercase text-gold mb-2">{s.label}</div>
+              <div className="text-[22px] font-black text-navy tracking-[-0.5px] mb-1 font-syne">{s.value}</div>
+              <div className="text-[13px] text-muted-400">{s.note}</div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

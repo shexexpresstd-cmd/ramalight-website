@@ -4,27 +4,38 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          DEFAULT: '#0a1628',
-          50: '#0f1f3d',
-          100: '#132952',
-          200: '#1a3a6b',
-          300: '#244b85',
-          400: '#2d5fa0',
+        navy: {
+          DEFAULT: '#060e1a',
+          50: '#0a1628',
+          100: '#0f1f35',
+          200: '#1a365d',
+          300: '#2a4a7f',
         },
-        accent: {
-          DEFAULT: '#0d3320',
-          light: '#1a5c3a',
-          pale: '#ecfdf5',
+        gold: {
+          DEFAULT: '#c8960c',
+          light: '#f0c040',
+          pale: '#fef9e7',
+          2: '#e8a020',
         },
-        blue: {
-          DEFAULT: '#3b82f6',
-          light: '#60a5fa',
-          pale: '#eff6ff',
+        surface: {
+          DEFAULT: '#ffffff',
+          50: '#f8f9fb',
+          100: '#f2f4f7',
+          200: '#eaecf0',
+          300: '#d0d5dd',
+        },
+        muted: {
+          400: '#98a2b3',
+          500: '#667085',
+          600: '#475467',
+          700: '#344054',
+          800: '#1d2939',
+          900: '#101828',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        syne: ['Syne', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
       },
     },
   },

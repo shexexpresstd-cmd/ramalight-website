@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,96 +14,56 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = ['Home', 'Products', 'Specifications', 'About', 'Contact'];
+  const links = ['Home', 'Products', 'Specifications', 'About', 'Contact'];
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)]'
-          : 'bg-white'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[80px] relative">
-        {/* Logo — absolutely positioned, extends beyond header */}
-        <a href="#" className="absolute left-6 lg:left-12 top-[55%] -translate-y-1/2 z-50">
-          <img
-            src="/logo.png"
-            alt="RAMALIGHT CO. LIMITED"
-            className="h-[200px] w-auto"
-            style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))' }}
-          />
+    <nav className={`fixed top-0 left-0 right-0 z-[100] py-3.5 transition-all duration-[400ms] ${
+      scrolled ? 'bg-navy/95 backdrop-blur-2xl py-2 border-b border-white/5' : 'bg-transparent'
+    }`}>
+      <div className="container-xl flex items-center justify-between px-10">
+        <a href="#" className="flex items-center no-underline">
+          <img src="/logo.png" alt="RAMALIGHT" className="h-16 w-auto brightness-105" />
         </a>
 
-        {/* Nav links — centered in the slim bar */}
-        <ul className="hidden lg:flex items-center gap-8 ml-auto mr-4">
-          {navLinks.map((l) => (
+        <ul className="hidden lg:flex gap-8 items-center">
+          {links.map((l, i) => (
             <li key={l}>
-              <a
-                href="#"
-                className={`text-xs font-semibold tracking-wide uppercase transition-colors ${
-                  l === 'Home'
-                    ? 'text-brand'
-                    : 'text-slate-500 hover:text-brand'
-                }`}
-              >
+              <a href="#" className={`text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-gold-light after:transition-all after:duration-300 ${
+                i === 0 ? 'text-white after:w-full' : 'text-white/50 hover:text-white after:w-0 hover:after:w-full'
+              }`}>
                 {l}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Phone + CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="tel:+254724806736"
-            className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-brand transition-colors"
-          >
-            <Phone size={12} /> +254 724 806 736
+        <div className="hidden lg:flex items-center gap-2.5">
+          <a href="tel:+254724806736" className="px-5 py-2.5 rounded-md text-[13px] font-semibold border border-white/10 text-white hover:border-gold-light/50 hover:text-gold-light transition-all duration-200 mr-1">
+            +254 724 806 736
           </a>
-          <motion.button
-            className="px-4 py-1.5 text-xs font-semibold bg-accent text-white rounded"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-          >
+          <a href="#contact" className="px-5 py-2.5 rounded-md text-[13px] font-semibold bg-gradient-to-br from-gold to-gold-light text-navy hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(200,150,12,0.35)] transition-all duration-200">
             Get a Quote
-          </motion.button>
+          </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button className="lg:hidden text-slate-700 ml-auto" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            className="lg:hidden bg-white border-t border-slate-100 px-6 py-5"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-          >
+          <motion.div className="lg:hidden bg-navy-50 border-t border-white/5 px-10 py-6" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
             <ul className="flex flex-col gap-4 mb-5">
-              {navLinks.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-slate-600 hover:text-brand text-sm font-medium" onClick={() => setMenuOpen(false)}>{l}</a>
-                </li>
+              {links.map(l => (
+                <li key={l}><a href="#" className="text-white/60 hover:text-white text-sm font-medium" onClick={() => setMenuOpen(false)}>{l}</a></li>
               ))}
             </ul>
-            <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-slate-700 border border-slate-200 rounded-lg mb-2">
-              +254 724 806 736
-            </a>
-            <button className="w-full px-4 py-2.5 text-sm font-semibold bg-accent text-white rounded-lg">
-              Get a Quote
-            </button>
+            <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-white border border-white/10 rounded-md mb-2">+254 724 806 736</a>
+            <a href="#contact" className="block w-full text-center px-4 py-2.5 text-sm font-semibold bg-gradient-to-br from-gold to-gold-light text-navy rounded-md">Get a Quote</a>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
