@@ -27,22 +27,24 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-3">
-        <a href="#" className="flex items-center shrink-0">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[48px] relative">
+        {/* Logo — absolutely positioned, extends beyond header */}
+        <a href="#" className="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 z-50">
           <img
             src="/logo.png"
             alt="RAMALIGHT CO. LIMITED"
-            className="h-16 lg:h-20 w-auto"
-            style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
+            className="h-[200px] w-auto"
+            style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }}
           />
         </a>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        {/* Nav links — centered in the slim bar */}
+        <ul className="hidden lg:flex items-center gap-8 ml-auto mr-4">
           {navLinks.map((l) => (
             <li key={l}>
               <a
                 href="#"
-                className={`text-sm font-medium transition-colors ${
+                className={`text-xs font-semibold tracking-wide uppercase transition-colors ${
                   l === 'Home'
                     ? 'text-white'
                     : 'text-white/60 hover:text-white'
@@ -54,15 +56,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Phone + CTA */}
+        <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:+254724806736"
-            className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors"
           >
-            <Phone size={14} /> +254 724 806 736
+            <Phone size={12} /> +254 724 806 736
           </a>
           <motion.button
-            className="px-5 py-2.5 text-sm font-semibold bg-accent text-white rounded-lg"
+            className="px-4 py-1.5 text-xs font-semibold bg-accent text-white rounded"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -70,11 +73,13 @@ export default function Navbar() {
           </motion.button>
         </div>
 
-        <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        {/* Mobile hamburger */}
+        <button className="lg:hidden text-white ml-auto" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

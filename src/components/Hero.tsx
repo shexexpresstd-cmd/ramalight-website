@@ -31,7 +31,7 @@ export default function Hero() {
   ];
 
   return (
-    <section ref={heroRef} className="relative bg-brand min-h-screen flex items-center overflow-hidden pt-24 pb-20">
+    <section ref={heroRef} className="relative bg-brand min-h-screen flex items-center overflow-hidden pt-32 pb-20">
       {/* Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
