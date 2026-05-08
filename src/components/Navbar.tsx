@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-visible h-16 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-visible h-[90px] ${
         scrolled
           ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)] py-1'
           : 'bg-white/95 backdrop-blur py-2'
