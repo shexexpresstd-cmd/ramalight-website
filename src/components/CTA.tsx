@@ -8,16 +8,16 @@ export default function CTA() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section className="py-24 bg-gradient-to-br from-brand to-brand-50 text-center relative overflow-hidden">
+    <section className="py-24 bg-accent-pale text-center relative overflow-hidden">
       {/* Animated lines */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
+          className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
           animate={{ x: ['-100%', '100%'] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/10 to-transparent"
+          className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
           animate={{ x: ['100%', '-100%'] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
         />
@@ -25,16 +25,16 @@ export default function CTA() {
 
       <div className="container-xl px-6 relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-[-1px] mb-3"
+          className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-[-1px] mb-3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Ready to <span className="text-accent-light">Partner</span> With Us?
+          Ready to <span className="text-accent">Partner</span> With Us?
         </motion.h2>
         <motion.p
-          className="text-lg text-white/40 max-w-[500px] mx-auto mb-8"
+          className="text-lg text-slate-500 max-w-[500px] mx-auto mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

@@ -12,22 +12,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-brand pt-16 pb-8">
+    <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-100">
       <div className="container-xl px-6 lg:px-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div>
             <img src="/logo.png" alt="RAMALIGHT CO. LIMITED" className="h-16 w-auto mb-4" />
-            <p className="text-sm text-white/30 leading-relaxed mb-4">
+            <p className="text-sm text-slate-500 leading-relaxed mb-4">
               RAMALIGHT CO. LIMITED — East Africa&apos;s premier manufacturer of
               industrial-grade sodium hypochlorite. Quality. Consistency. Trust.
             </p>
-            <p className="text-xs text-white/20">ramalight.co.ke</p>
+            <p className="text-xs text-slate-400">ramalight.co.ke</p>
           </div>
 
           {links.map(([title, items]) => (
             <div key={title as string}>
-              <h4 className="text-sm font-bold text-white mb-5 tracking-[0.3px]">
+              <h4 className="text-sm font-bold text-slate-800 mb-5 tracking-[0.3px]">
                 {title}
               </h4>
               <ul className="space-y-3">
@@ -35,7 +35,7 @@ export default function Footer() {
                   <li key={l}>
                     <a
                       href="#"
-                      className="text-sm text-white/30 hover:text-accent-light transition-colors duration-200"
+                      className="text-sm text-slate-500 hover:text-accent transition-colors duration-200"
                     >
                       {l}
                     </a>
@@ -46,8 +46,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/[0.04] pt-6 text-center">
-          <p className="text-xs text-white/15">
+        <div className="border-t border-slate-200 pt-6 text-center">
+          <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} RAMALIGHT CO. LIMITED. All rights
             reserved.
           </p>

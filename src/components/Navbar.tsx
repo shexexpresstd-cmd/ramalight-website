@@ -20,21 +20,21 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-brand/98 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.3)]'
-          : 'bg-brand'
+          ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.06)]'
+          : 'bg-white'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[48px] relative">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-[66px] relative">
         {/* Logo — absolutely positioned, extends beyond header */}
         <a href="#" className="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 z-50">
           <img
             src="/logo.png"
             alt="RAMALIGHT CO. LIMITED"
             className="h-[200px] w-auto"
-            style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))' }}
+            style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))' }}
           />
         </a>
 
@@ -46,8 +46,8 @@ export default function Navbar() {
                 href="#"
                 className={`text-xs font-semibold tracking-wide uppercase transition-colors ${
                   l === 'Home'
-                    ? 'text-white'
-                    : 'text-white/60 hover:text-white'
+                    ? 'text-brand'
+                    : 'text-slate-500 hover:text-brand'
                 }`}
               >
                 {l}
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:+254724806736"
-            className="flex items-center gap-1.5 text-xs text-white/50 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-brand transition-colors"
           >
             <Phone size={12} /> +254 724 806 736
           </a>
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button className="lg:hidden text-white ml-auto" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="lg:hidden text-slate-700 ml-auto" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
@@ -83,7 +83,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="lg:hidden bg-brand border-t border-white/10 px-6 py-5"
+            className="lg:hidden bg-white border-t border-slate-100 px-6 py-5"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -91,11 +91,11 @@ export default function Navbar() {
             <ul className="flex flex-col gap-4 mb-5">
               {navLinks.map((l) => (
                 <li key={l}>
-                  <a href="#" className="text-white/70 hover:text-white text-sm font-medium" onClick={() => setMenuOpen(false)}>{l}</a>
+                  <a href="#" className="text-slate-600 hover:text-brand text-sm font-medium" onClick={() => setMenuOpen(false)}>{l}</a>
                 </li>
               ))}
             </ul>
-            <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-white border border-white/15 rounded-lg mb-2">
+            <a href="tel:+254724806736" className="block w-full text-center px-4 py-2.5 text-sm font-semibold text-slate-700 border border-slate-200 rounded-lg mb-2">
               +254 724 806 736
             </a>
             <button className="w-full px-4 py-2.5 text-sm font-semibold bg-accent text-white rounded-lg">
