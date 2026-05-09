@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 
 const industries = [
-  { icon: '/icons/icon_9.png', title: 'Water Treatment', desc: 'Municipal &amp; industrial water disinfection, wastewater treatment, and pipeline sanitation.' },
-  { icon: '/icons/icon_10.png', title: 'Industrial Cleaning', desc: 'Heavy-duty degreasing, equipment sterilization, and production line sanitation.' },
-  { icon: '/icons/icon_11.png', title: 'Food Processing', desc: 'Contact surface sanitization, CIP systems, and facility hygiene protocols.' },
-  { icon: '/icons/icon_12.png', title: 'Commercial Use', desc: 'Hotels, hospitals, schools, and large-scale institutional cleaning programs.' },
-  { icon: '/icons/icon_13.png', title: 'Agriculture', desc: 'Irrigation system treatment, livestock area disinfection, and crop protection.' },
-  { icon: '/icons/icon_14.png', title: 'Healthcare', desc: 'Surface disinfection, waste decontamination, and infection control protocols.' },
+  { icon: '/icons/icon_9.svg', title: 'Water Treatment', desc: 'Municipal &amp; industrial water disinfection, wastewater treatment, and pipeline sanitation.' },
+  { icon: '/icons/icon_10.svg', title: 'Industrial Cleaning', desc: 'Heavy-duty degreasing, equipment sterilization, and production line sanitation.' },
+  { icon: '/icons/icon_11.svg', title: 'Food Processing', desc: 'Contact surface sanitization, CIP systems, and facility hygiene protocols.' },
+  { icon: '/icons/icon_12.svg', title: 'Commercial Use', desc: 'Hotels, hospitals, schools, and large-scale institutional cleaning programs.' },
+  { icon: '/icons/icon_13.svg', title: 'Agriculture', desc: 'Irrigation system treatment, livestock area disinfection, and crop protection.' },
+  { icon: '/icons/icon_14.svg', title: 'Healthcare', desc: 'Surface disinfection, waste decontamination, and infection control protocols.' },
 ];
 
 export default function Features() {
@@ -27,7 +27,7 @@ export default function Features() {
           {industries.map((item, i) => (
             <motion.div key={item.title} className="group bg-white p-8 rounded-xl border border-surface-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:border-accent/20 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-              <img src={item.icon} alt={item.title} className="w-64 h-64 object-contain mb-4 group-hover:scale-110 transition-transform" />
+              <img src={item.icon} alt={item.title} className="w-64 h-64 object-contain mb-5 group-hover:scale-110 transition-transform duration-300" />
               <h4 className="text-[17px] font-bold text-muted-900 mb-2">{item.title}</h4>
               <p className="text-[14px] text-muted-400 leading-relaxed">{item.desc}</p>
             </motion.div>
