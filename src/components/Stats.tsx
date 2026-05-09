@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Factory, Shield, Truck, Clock } from 'lucide-react';
 
 const stats = [
-  { icon: Factory, value: '10+', label: 'Tons Daily Production', sub: 'Continuous operation at our Kenya facility' },
-  { icon: Shield, value: '10–15%', label: 'Active Chlorine', sub: 'Consistent concentration, batch-tested' },
-  { icon: Truck, value: '3,600', label: 'Annual Tonnage', sub: 'Serving East Africa at scale' },
-  { icon: Clock, value: '6 Mo.', label: 'Shelf Life', sub: 'Properly stored, no degradation' },
+  { icon: '/icons/icon_stats_1.svg', value: '10+', label: 'Tons Daily Production', sub: 'Continuous operation at our Kenya facility' },
+  { icon: '/icons/icon_stats_2.svg', value: '10–15%', label: 'Active Chlorine', sub: 'Consistent concentration, batch-tested' },
+  { icon: '/icons/icon_stats_3.svg', value: '3,600', label: 'Annual Tonnage', sub: 'Serving East Africa at scale' },
+  { icon: '/icons/icon_stats_4.svg', value: '6 Mo.', label: 'Shelf Life', sub: 'Properly stored, no degradation' },
 ];
 
 export default function Stats() {
@@ -26,9 +25,7 @@ export default function Stats() {
           {stats.map((s, i) => (
             <motion.div key={s.label} className="bg-white p-8 rounded-xl border border-surface-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] hover:border-accent/20 transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <div className="w-12 h-12 rounded-xl bg-brand flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <s.icon size={22} className="text-accent-light" />
-              </div>
+              <img src={s.icon} alt={s.label} className="w-[60px] h-[60px] object-contain mb-5 group-hover:scale-110 transition-transform" />
               <div className="text-[36px] font-black text-brand tracking-[-1px] mb-1 font-syne">{s.value}</div>
               <div className="text-[15px] font-semibold text-muted-800 mb-2">{s.label}</div>
               <div className="text-[13px] text-muted-400 leading-relaxed">{s.sub}</div>
