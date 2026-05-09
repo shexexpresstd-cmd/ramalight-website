@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion';
 
 const reasons = [
-  { icon: '/icons/icon_5.png', title: 'Consistent Quality', desc: 'Every batch tested to ensure 10% active chlorine — no variance, no surprises.' },
-  { icon: '/icons/icon_6.png', title: 'Reliable Supply', desc: '10-ton daily capacity ensures your orders are fulfilled on time, every time.' },
-  { icon: '/icons/icon_7.png', title: 'Competitive Pricing', desc: 'Local manufacturing means better prices for East African businesses.' },
-  { icon: '/icons/icon_8.png', title: 'Fast Delivery', desc: 'Strategic location enables quick dispatch to Kenya, Uganda, Tanzania, and beyond.' },
+  { icon: '/icons/icon_5.svg', title: 'Consistent Quality', desc: 'Every batch tested to ensure 10% active chlorine — no variance, no surprises.' },
+  { icon: '/icons/icon_6.svg', title: 'Reliable Supply', desc: '10-ton daily capacity ensures your orders are fulfilled on time, every time.' },
+  { icon: '/icons/icon_7.svg', title: 'Competitive Pricing', desc: 'Local manufacturing means better prices for East African businesses.' },
+  { icon: '/icons/icon_8.svg', title: 'Fast Delivery', desc: 'Strategic location enables quick dispatch to Kenya, Uganda, Tanzania, and beyond.' },
 ];
 
 export default function WhyUs() {
@@ -25,7 +25,7 @@ export default function WhyUs() {
           {reasons.map((r, i) => (
             <motion.div key={r.title} className="text-center group cursor-default"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}>
-              <img src={r.icon} alt={r.title} className="w-40 h-40 object-contain mx-auto mb-4 group-hover:scale-110 transition-transform" />
+              <img src={r.icon} alt={r.title} className="w-[180px] h-[180px] object-contain mx-auto mb-4 group-hover:scale-110 transition-transform" />
               <h4 className="text-base font-bold text-muted-800 mb-2">{r.title}</h4>
               <p className="text-sm text-muted-400 leading-relaxed">{r.desc}</p>
             </motion.div>
