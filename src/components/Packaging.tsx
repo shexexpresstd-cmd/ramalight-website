@@ -25,7 +25,7 @@ export default function Packaging() {
           {sizes.map((s, i) => (
             <motion.div key={s.size} className="bg-white rounded-xl border border-accent/20 p-8 text-center hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <div className="w-28 h-28 mx-auto flex items-center justify-center mb-5 group-hover:scale-110 transition-all">
+              <div className="w-36 h-36 mx-auto flex items-center justify-center mb-5 group-hover:scale-110 transition-all">
                 <img src={s.icon} alt={s.label} className="w-full h-full object-contain" />
               </div>
               <div className="text-[28px] font-black text-brand tracking-[-0.5px] mb-1 font-syne">{s.size}</div>

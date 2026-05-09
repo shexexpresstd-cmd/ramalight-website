@@ -25,7 +25,7 @@ export default function WhyUs() {
           {reasons.map((r, i) => (
             <motion.div key={r.title} className="text-center group cursor-default"
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15 }}>
-              <div className="w-24 h-24 mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-32 h-32 mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <img src={r.icon} alt={r.title} className="w-full h-full object-contain" />
               </div>
               <h4 className="text-base font-bold text-muted-800 mb-2">{r.title}</h4>
